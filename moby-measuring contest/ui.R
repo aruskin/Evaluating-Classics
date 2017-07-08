@@ -29,8 +29,12 @@ fluidPage(
                              choices=c(`Moby Dick; Or, The Whale (Melville, Herman)`=2701), multiple=FALSE)
     )),
   fluidRow(
-    column(5, tableOutput("lhs.table")),
-    column(2),
-    column(5, tableOutput(("rhs.table")))),
-  fluidRow(verbatimTextOutput("comparison"))
+    verbatimTextOutput("comparison"),
+    tableOutput("my.table")
+  )
+#   fluidRow(
+#     column(5, tableOutput("lhs.table")),
+#     column(2),
+#     column(5, tableOutput(("rhs.table")))),
+#   fluidRow(verbatimTextOutput("comparison"))
 )

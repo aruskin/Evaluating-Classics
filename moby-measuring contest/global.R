@@ -16,11 +16,12 @@ get_relevant_works <- function(search.field, search.query){
                       language=='en', has_text)
   }
   if(nrow(results) == 0){
-    c(`No results found` = NA)
+    c(`No results found` = "")
   }else{
     id <- results$gutenberg_id
     out_names <- paste0(results$title, " (", results$author, ")")
-    setNames(id, out_names)
+    out_names <- setNames(id, out_names)
+    out_names <- c("Choose one:"="", out_names)
   }
 }
 
