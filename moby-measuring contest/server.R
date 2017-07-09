@@ -1,5 +1,3 @@
-library(data.table)
-library(xtable)
 function(input, output, session) {
   
   tables <- reactiveValues(lhs_table=NULL, rhs_table=NULL)
